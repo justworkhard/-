@@ -5,6 +5,7 @@ import defaultSettings from './defaultSettings';
 import os from 'os';
 import slash from 'slash2';
 import webpackPlugin from './plugin.config';
+import { routeOBJ } from '../src/routes/index';
 
 const { pwa, primaryColor } = defaultSettings;
 
@@ -101,22 +102,7 @@ export default {
   },
   devtool: ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION ? 'source-map' : false,
   // 路由配置
-  routes: [
-    {
-      path: '/',
-      component: '../layouts/BasicLayout',
-      Routes: ['src/pages/Authorized'],
-      authority: ['admin', 'user'],
-      routes: [
-        {
-          path: '/',
-          name: 'welcome',
-          icon: 'smile',
-          component: './Welcome',
-        },
-      ],
-    },
-  ],
+  routes: routeOBJ,
   // Theme for antd
   // https://ant.design/docs/react/customize-theme-cn
   theme: {
