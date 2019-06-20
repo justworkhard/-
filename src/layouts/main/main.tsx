@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './main.less';
 import classNames from 'classnames'
-import { Carousel } from 'antd';
 
 
 class App extends React.Component{
@@ -20,7 +19,7 @@ class App extends React.Component{
   }
   render(){
     return(
-      <div>
+      <div className = {styles.body}>
         <div className = {styles.header}>
           <div className = {styles.head_left}>
             <img src="" alt=""/>
@@ -43,11 +42,14 @@ class App extends React.Component{
           </div>
           <div className = {styles.item_class}>
             {this.state.headerList.map( (item,index) =>{
-              return <div onClick ={()=>{this.setState({sub_active_index:index})}} className = {classNames(styles.name,this.state.sub_active_index == index ?styles.name_active:'')}>{item.name}</div>
+              return <div key = {index} onClick ={()=>{this.setState({sub_active_index:index})}} className = {classNames(styles.name,this.state.sub_active_index == index ?styles.name_active:'')}>{item.name}</div>
             })}
           </div>
         </div>
         {this.props.children}
+        <div className = {styles.footer}>
+          
+        </div>
       </div>
     )
   }
