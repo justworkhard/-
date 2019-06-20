@@ -22,19 +22,25 @@
     "test:all": "node ./tests/run-tests.js",
     "test:component": "umi test ./src/components"
   },
-  "husky": { "hooks": { "pre-commit": "npm run lint-staged" } },
-  "lint-staged": {
-    "**/*.less": "stylelint --syntax less",
-    "**/*.{js,jsx,tsx,ts,less,md,json}": ["prettier --write", "git add"],
-    "**/*.{js,jsx}": "npm run lint-staged:js",
-    "**/*.{js,ts,tsx}": "npm run lint-staged:js"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
   },
-  "browserslist": ["> 1%", "last 2 versions", "not ie <= 10"],
+  "lint-staged": {
+
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ],
   "dependencies": {
     "@ant-design/pro-layout": "^4.5.0",
     "@antv/data-set": "^0.10.2",
     "antd": "^3.19.1",
     "classnames": "^2.2.6",
+    "core-js": "^3.1.4",
     "dva": "^2.4.1",
     "lodash": "^4.17.11",
     "lodash-decorators": "^6.0.1",
@@ -92,8 +98,12 @@
     "slash2": "^2.0.0",
     "webpack-theme-color-replacer": "^1.1.5"
   },
-  "optionalDependencies": { "puppeteer": "^1.17.0" },
-  "engines": { "node": ">=10.0.0" },
+  "optionalDependencies": {
+    "puppeteer": "^1.17.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "checkFiles": [
     "src/**/*.js*",
     "src/**/*.ts*",
