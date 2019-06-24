@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './main.less';
 import classNames from 'classnames';
+import IconFont from '../../utils/IconFont';
 
 class App extends React.Component {
   constructor(prop: any) {
@@ -99,7 +100,7 @@ class App extends React.Component {
           <div className={styles.head_right}>
             <div className={styles.right_item}>
               <div className={styles.MyInput}>
-                <img src="" alt="" />
+                <IconFont type = 'icon-xiazai17'/>
                 <input type="text" placeholder="音乐/频道/电台/用户" />
               </div>
             </div>

@@ -1,5 +1,5 @@
 .body{
-  background-color: #f2f2f2
+  background-color: #a6a6a6
 }
 .header{
   position: relative;
@@ -47,14 +47,56 @@
   .head_right{
     display: flex;
     align-items: center;
+    font-size: 12px;
+    color: #a6a6a6;
     .center{
       padding: 5px 10px;
-      border: 1px solid white;
+      border: 1px solid #404040;
       border-radius: 17px;
       margin: 0 20px;
+      white-space: nowrap;
     }
     .login{
-      
+      white-space: nowrap;  
+      position: relative;  
+      height: 70px;
+      width: 80px;
+      line-height: 70px;
+      text-align: center;
+      &:hover{
+        .login_type_list{
+          display: block
+        }
+      }
+      .login_type_list{
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: -39px;
+        width: 158px;
+        background: #2b2b2b;
+        border: 1px solid #202020;
+        box-shadow: 0 8px 24px 0 rgba(0,0,0,0.50);
+        border-radius: 4px;
+        z-index: 100;
+        padding: 0px;
+        margin: 0px;
+          li{
+            display: flex;
+            height: 40px;
+            line-height: 30px;
+            align-items: center;
+            padding-left: 20px;
+            &:hover{
+              background-color: rgb(53, 53, 53)
+            }
+            .IconFont{
+              font-size: 20px;
+              margin-right: 10px;
+            }
+          }
+        
+      }  
     }
   }
   .item_class{
@@ -77,6 +119,7 @@
       padding:0px 10px;
       margin: 20px;
       font-size: 5px;
+      white-space: nowrap
     }
     .name_active{
       background-color: #9B0909;
@@ -84,7 +127,7 @@
   }
 }
 .MyInput{
-  height: 40px;
+  height: 30px;
   border-radius: 20px;
   padding:5px 20px;
   background-color: white;
@@ -97,13 +140,56 @@
   input{
     outline: none;
     border: none;
-    height: 40px;
+    height: 30px;
     width: 150px;
-    color: black
+    color: black;
   }
 
 }
   .footer{
     height: 80px;
-    border-top: 1px solid #d3d3d3;
+    border-top: 1px solid #eaeaea;
+  }
+  .modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    input{
+      border: 1px solid #cdcdcd;;
+      outline: none;
+      height: 30px;
+      width: 200px;
+      margin-top: 10px;
+      padding-left: 10px;
+    }
+    .btn_login{
+      background-color: #2866d7;
+      width: 210px;
+      height: 30px;
+      color: white;
+      font-size: 15px;
+      border-radius: 5px;
+      text-align: center;
+      line-height: 30px;
+      cursor: pointer;
+    }
+    .remenber_PS{
+      display: flex;
+      height: 20px;
+      justify-content: center;
+      margin: 10px 0;
+      .checkbox{
+        display: inline-block;
+        height: 12px;
+        width: 12px;
+        margin: 4px;
+      }
+    }
+  .erro_warn{
+    margin-top: 10px;
+    color: #e33232;
+  }
   }
